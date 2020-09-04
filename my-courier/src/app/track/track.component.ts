@@ -8,11 +8,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./track.component.css']
 })
 export class TrackComponent implements OnInit {
-  public data2: any = [];
+  public data1: any = [];
   constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
-    this.load2();
+    this.getData();
   }
   // list1 = [{ id: "1" },
   // { id: "2" }];
@@ -34,12 +34,12 @@ export class TrackComponent implements OnInit {
   // ];
 
   // 
-  async load2() {
+  async getData() {
     let mail = sessionStorage.getItem('sid')
     const url = `http://localhost:1400/getDetail?email=${mail}`;
     let result: any = await this.http.get(url).toPromise();
-    this.data2 = result;
-    console.log(this.data2);
+    this.data1 = result;
+    console.log(this.data1);
 
   }
 

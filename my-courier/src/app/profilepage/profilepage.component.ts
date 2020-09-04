@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class ProfilepageComponent implements OnInit {
 
-  public data2: any = [];
+  public data1: any = [];
   constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
@@ -19,8 +19,8 @@ export class ProfilepageComponent implements OnInit {
     let mail = sessionStorage.getItem('sid')
     const url = `http://localhost:1400/getUser?email=${mail}`;
     let result: any = await this.http.get(url).toPromise();
-    this.data2 = result;
-    console.log(this.data2);
+    this.data1 = result;
+    console.log(this.data1);
 
   }
 
