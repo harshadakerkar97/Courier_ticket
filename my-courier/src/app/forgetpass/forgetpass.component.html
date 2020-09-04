@@ -1,0 +1,53 @@
+<!-- <p>forgetpass works!</p> -->
+<div class="mainbody container-fluid">
+    <div class="innerback">
+        <div class="imgdis col-6 d-none sticky-bottom d-lg-block p-0 m-0 align-items-end justify-content-end">
+            <div style="font-size: 3vw; text-align: center; margin-top: 5vh; font-weight: 900;
+             font-family: sans-serif; text-shadow: 2px 2px 8px white; padding-top: 50%;">
+                Forgot Password !!!
+            </div>
+
+        </div>
+
+        <div class="signin col-12 col-md-6" [formGroup]="dbForm">
+            <div class="row d-flex justify-content-center align-items-center mb-3" style="height:20px;">
+                <div class="alert alert-danger h6" role="alert" *ngIf="uiInvalidCredential">
+                    Invalid username or password
+                </div>
+            </div>
+            <div class="logo">
+                <img src="https://img.icons8.com/ios-filled/40/000000/pin.png" /> Reset Password
+            </div>
+
+            <div>
+
+                <input class="usernameinput ipbox" type="text" id="uname" placeholder="Email Address"
+                    formControlName="email" />
+
+            </div>
+
+            <div>
+
+                <input class="passwordinput ipbox" type="password" id="pass" placeholder="New Password"
+                    formControlName="pass" />
+
+            </div>
+
+            <div style="margin-bottom: 2vh;">
+
+                <input class="passwordinput ipbox" type="password" id="conpass" placeholder="Re-Enter Password"
+                    formControlName="conpass">
+            </div>
+
+            <div>
+                <button class="loginbtn" (click)="UpdateHere()">Update</button>
+            </div>
+
+            <div class="text">
+                Don't have an account?<a routerLink='/reg' style="color: black;"> Register here</a>
+                <br>or goto <a routerLink='/home' style="color: black;"> Home</a>
+            </div>
+
+        </div>
+    </div>
+</div>

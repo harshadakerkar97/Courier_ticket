@@ -1,0 +1,30 @@
+<!-- <p>profilepage works!</p> -->
+<div class="bg-light d-flex align-items-center justify-content-center" style="height:80vh">
+    <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-8 col-md-6 d-flex"
+            style="height:60vh;width: 50vw; border-radius: 5%; background-color: rgba(243, 229, 36, 0.445);">
+            <div class="container justify-content-center">
+                <div class="row justify-content-center" style="font-size:xx-large">
+                    Your Profile
+                </div>
+                <div class="row justify-content-center" style="margin-bottom: 5vh;">
+                    <img src="https://raw.githubusercontent.com/karanjadhav/karanjadhav.github.io/master/kitten.jpg"
+                        alt="Avatar" style="width:40%; border-radius: 50%;">
+                </div>
+
+                <div class="row" *ngFor="let item of data2" style="height:8vh;">
+
+                    <div class="col-4 border d-flex align-items-center justify-content-center">Name</div>
+                    <div class="col-8">{{item.aname}}</div>
+                    <div class="col-4 border d-flex align-items-center justify-content-center">Email</div>
+                    <div class="col-8">{{item.email}}</div>
+                    <div class="col-4 border d-flex align-items-center justify-content-center">Dob</div>
+                    <div class="col-8"> {{item.dob}}</div>
+                    <div class="col-4 border d-flex align-items-center justify-content-center">Contact no</div>
+                    <div class="col-8">{{item.contact}}</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

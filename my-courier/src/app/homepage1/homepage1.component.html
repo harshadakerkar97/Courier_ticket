@@ -1,0 +1,36 @@
+<!-- <p>homepage1 works!</p> -->
+<div class="container-fluid" style="background:rgba(56, 56, 55, 0.1)">
+    <!-- nav bar -->
+    <div class="row bg-warning sticky-top" style="height: 10vh">
+        <div class="col d-flex align-items-center justify-content-center text-dark h1">
+            Track Your Courier
+            <img src="./assets/source.gif" alt="" style="height:10vh">
+        </div>
+
+        <div class="col d-flex align-items-center justify-content-end">
+            <button class="btn btn-lg btn-outline-dark mr-1" (click)="gotopage(item.link)" *ngFor="let item of path">
+                {{ item.title }}
+            </button>
+            <div class="dropdown">
+                <button class="dropbtn">Profile</button>
+                <div class="dropdown-content">
+                    <a (click)="profilep()">Profile</a>
+                    <a (click)="logoutHere()">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+    <div class="row d-flex fixed-bottom justify-content-center" style="height: 10vh; background-color: orange;">
+        <div class="col-12 d-flex justify-content-center"
+            style="font-size: x-large; color: white; font-weight: 900; padding: 0 5vh 0 5vh;">
+            About us :
+        </div>
+        <div class="col-12 d-flex justify-content-center" style="font-size: large; color: black; padding: 0 5vh 0 5vh;">
+            We don't just track your courier, we also ensure it is in the right place.
+        </div>
+    </div>
+
+
+
+</div>

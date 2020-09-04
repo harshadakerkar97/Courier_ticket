@@ -1,0 +1,32 @@
+.mainbody{
+    background: url("https://free4kwallpapers.com/uploads/originals/2020/01/08/d-abstract-k--wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+.cckbtn {
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  height: 8vh;
+  width: 90%;
+  margin-top:2vh;
+  margin-bottom: 2vh;
+  margin-left: 2vw;
+  height: 6vh;
+  width: auto;
+  background-color: darkblue;
+  color: white;
+  font-size: 1em;
+  font-weight: 900;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.cckbtn:hover{
+  background-color: rgb(51, 197, 255);
+  color: black;
+}

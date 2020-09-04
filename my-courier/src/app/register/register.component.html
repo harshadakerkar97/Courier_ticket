@@ -1,0 +1,156 @@
+<div class="container-fluid">
+    <div class="row justify-content-center align-items-center h-6" style="height:100vh;
+    background: url('https://free4kwallpapers.com/uploads/originals/2020/01/08/d-abstract-k--wallpaper.jpg');
+    background-repeat: no-repeat; background-position: center; background-size: cover;">
+        <div class="col-12 col-md-9 text-light">
+            <div class="row justify-content-center align-items-center h5" style="border-radius: 15px ;">
+                <!-- MAIN CONTENT BOX -->
+                <div class="col-12 col-md-6 " [formGroup]=" dform" style="height: 70vh; width: 50%;
+                background:rgba(0, 0, 8, 0.719);">
+                    <div class=" row justify-content-between align-items-center mt-1 ml-1 mb-1">
+                        <div class="col-8 col-md-6 mt-2 p-0 m-0">
+                            <h3>Register Here</h3>
+                        </div>
+                        <div class="col-3 col-md-3 p-0 m-1">
+                            <select class="custom-select custom-select-md" formControlName="sel">
+                                <option value="admin" id="admin">ADMIN</option>
+                                <option value="user" id="user" selected>USER</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- username -->
+                    <div class="form-group mt-3 mb-1 m-0 ">
+                        <label style="margin:0;padding:1; margin-bottom: 1px;">Username :</label>
+                        <input type="text" class="form-control form-control-sm mt-1" id="uname"
+                            placeholder="Enter Username" formControlName="uname">
+                        <label class="col-3" for="" *ngIf="dform.get('uname').invalid && dform.get('uname').touched"
+                            style="color:red; font-size:small;">
+                            Invalid username</label>
+                    </div>
+                    <!-- Email -->
+                    <div class="form-group m-0 mb-1">
+                        <label style="margin:0;padding:0;">Email :</label>
+                        <input type="email" class="form-control form-control-sm mt-1" id="email"
+                            placeholder="Enter Email" formControlName="email">
+                        <label for="" *ngIf="dform.get('email').invalid && dform.get('email').touched"
+                            style="color:red; font-size:small">
+                            Invalid Email</label>
+                    </div>
+                    <!-- password -->
+                    <div class="form-group m-0 mb-1">
+                        <label style="margin:0;padding:0;">Password :</label>
+                        <input type="password" class="form-control form-control-sm mt-1" id="pass"
+                            placeholder="Enter password" formControlName="pass">
+                        <label for="" *ngIf="dform.get('pass').invalid && dform.get('pass').touched"
+                            style="color:red; font-size:small">
+                            Invalid Password</label>
+                    </div>
+                    <div class="form-group m-0 mb-1">
+                        <label style="margin:0;padding:0;">Confirm Password :</label>
+                        <input type="password" class="form-control form-control-sm mt-1" id="cpass"
+                            placeholder="Enter password Again" formControlName="conpass">
+                        <label for="" *ngIf="dform.get('conpass').invalid && dform.get('conpass').touched"
+                            style="color:red; font-size:small">
+                            Invalid Password</label>
+                    </div>
+                    <!-- contact no -->
+                    <div class="form-group row mb-1 mt-1 m-0">
+                        <div class="col-5 m-0 p-0">
+                            <label style="margin:0;padding:0;">Contact No :</label>
+                            <input type="text" class="form-control form-control-sm mt-1" id="phone"
+                                placeholder="Enter contact number" formControlName="cont">
+                            <label for="" *ngIf="dform.get('cont').invalid && dform.get('cont').touched"
+                                style="color:red; font-size:small">
+                                Invalid Contact number</label>
+                        </div>
+                        <div class="col-5 ml-3 p-0">
+                            <label style="margin:0;padding:0;">DOB :</label>
+                            <input type="date" class="form-control form-control-sm mt-1" id="dob"
+                                placeholder="Enter contact number" formControlName="dob">
+                            <label for="" *ngIf="dform.get('dob').invalid && dform.get('dob').touched"
+                                style="color:red; font-size:small">
+                                Invalid dob</label>
+                        </div>
+                    </div>
+                    <!-- gender
+                        <div class="form-row m-1  mt-2 align-items-center ">
+                            <label
+                                style="margin-top:1px;text-align: center; justify-content: center; align-items: center;">
+                                Gender :</label>
+                            <div class="form-check m-1">
+                                <input class="form-check-input" type="radio" name="exampleRadios"
+                                    id="exampleRadios1" value="option1">
+                                <label class="form-check-label" for="exampleRadios1">
+                                    Male
+                                </label>
+                            </div>
+                            <div class="form-check m-1">
+                                <input class="form-check-input" type="radio" name="exampleRadios"
+                                    id="exampleRadios2" value="option2">
+                                <label class="form-check-label" for="exampleRadios2">
+                                    Female
+                                </label>
+                            </div>
+                        </div> -->
+                    <!-- accept terms -->
+                    <div class="form-check m-1">
+                        <input class="form-check-input mt-1" type="checkbox" value="" id="terms">
+                        <label class="form-check-label ">
+                            I do accept the terms and Conditions of your site.
+                        </label>
+                    </div>
+
+                    <div class="row d-flex align-items-center justify-content-end mt-3 m-1">
+                        <div class="col-6 col-md-4 mt-3">
+                            <input type="button" value="Register Here" class="btn btn-primary" [disabled]="!dform.valid"
+                                (click)="resgisterHere()">
+                        </div>
+                    </div>
+                </div>
+                <!-- IMAGE VALA PART HIDDEN FOR SMALL DEVICES -->
+                <div class="col-6 d-none sticky-bottom d-lg-block p-0 m-0 align-items-end justify-content-end"
+                    style="height: 70vh; background: url('./assets/image.png'); background-size: cover; object-fit: cover;">
+                    <div class="row p-2 m-1 align-items-center" style="position:absolute;                  
+                    bottom:0;                          
+                    right:0; ">
+                        <a routerLink="/login">
+                            <img src="https://img.icons8.com/metro/26/000000/login-rounded-right.png" />
+                            Sign in &nbsp;</a>
+                        <a href="#"><img src="https://img.icons8.com/fluent/35/000000/gmail.png" /></a>
+                        <a href="#"> <img src="https://img.icons8.com/color/35/000000/facebook-new.png" /></a>
+                        <a href="#"><img src="https://img.icons8.com/color/35/000000/twitter-circled.png" /></a>
+
+                    </div>
+                </div>
+
+                <!------------------------ button for small devices ------------------------->
+                <div class="col-1 d-lg-none justify-content-start align-items-start mr-3 p-0"
+                    style="position: absolute;top:7vh;right:5vw">
+                    <div class="dropdown dropright">
+                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-menu-button-wide-fill"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M14 7H2a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zM2 6a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2H2z" />
+                                <path fill-rule="evenodd"
+                                    d="M15 11H1v-1h14v1zM2 12.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM1.5 0A1.5 1.5 0 0 0 0 1.5v2A1.5 1.5 0 0 0 1.5 5h13A1.5 1.5 0 0 0 16 3.5v-2A1.5 1.5 0 0 0 14.5 0h-13zm1 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3zm9.927.427l.396.396a.25.25 0 0 0 .354 0l.396-.396A.25.25 0 0 0 13.396 2h-.792a.25.25 0 0 0-.177.427z" />
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#"><i class="fa fa-sign-in fa-lg"
+                                    aria-hidden="true"></i>&nbsp Already user</a>
+                            <hr>
+                            <a class="dropdown-item mr-1" href="#">
+                                <img src="https://img.icons8.com/fluent/25/000000/gmail.png" />
+                                &nbsp Sign in using Google</a>
+                            <hr>
+                            <a class="dropdown-item" href="#">
+                                <img src="https://img.icons8.com/color/25/000000/facebook-new.png" />
+                                &nbsp Sign in using Facebook</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,107 @@
+.mainbody{
+    display: flex;
+    /*background-image: linear-gradient(to bottom right, rgb(201, 31, 201), rgb(77, 204, 255),rgb(201, 31, 201));*/
+    /*background-image: linear-gradient(to bottom right,purple,red);*/
+    background: url("https://free4kwallpapers.com/uploads/originals/2020/01/08/d-abstract-k--wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.innerback{
+    display: flex;
+    flex-direction: row;
+    height: 90vh;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    border-radius: 15px;
+    background-image: linear-gradient(to bottom, rgb(23, 189, 255), rgb(71, 140, 243));
+}
+
+.imgdis{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  border-radius: 15px 0px 0px 15px;
+  background: url("https://raw.githubusercontent.com/karanjadhav/karanjadhav.github.io/master/forgotpass.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+
+.signin{
+    display: flex;
+    width: 50%;
+    padding-top: 10vh;
+    flex-direction: column;
+    border-radius: 15px 15px 15px 15px;
+    background-image: linear-gradient(to bottom right, rgb(23, 189, 255), rgb(201, 31, 201));          
+}
+
+.logo{
+    font-size: 5vmin;
+    text-align: center;
+}
+
+.ipbox{
+    border-radius: 5px;
+    border: 1px purple;
+    outline: none;
+}
+
+.ipbox:focus{
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px rgb(247, 108, 247);
+    border: 3px solid rgba(247, 108, 247);
+}
+
+.usernameinput {
+    width: 60%;
+    height: 5vh;
+    margin-top: 10vh;
+    margin-left: 20%;
+    font-size: 3vmin;
+    text-align: center;
+}
+
+.passwordinput {
+    width: 60%;
+    height: 5vh;
+    margin-top: 3vh;
+    margin-left: 20%;
+    font-size: 3vmin;
+    text-align: center;
+}
+
+.loginbtn {
+    justify-content: center;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    height: 8vh;
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 10vh;
+    background-color: darkgreen;
+    color: white;
+    font-size: 5vmin;
+    font-weight: 900;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.loginbtn:hover{
+    background-color: lightgreen;
+    color: black;
+}
+
+.text{
+      margin-left: 20%;
+      text-align: left;
+      font-size: 3vmin;
+}
+
+a:link{text-decoration: none;}
+a:hover{text-decoration: underline;}

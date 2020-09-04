@@ -1,0 +1,95 @@
+<!-- <p>loginpage works!</p> -->
+<div class="mainbody container-fluid">
+    <div class="innerback">
+        <div class="imgdis col-6 d-none sticky-bottom d-lg-block p-0 m-0 align-items-end justify-content-end">
+            <div style="font-size: 3vw; text-align: center; margin-top: 5vh; font-weight: 900;
+             font-family: sans-serif; text-shadow: 2px 2px 8px darkgray;">
+                Track Your Courier <i class="fas fa-thumbtack" style="margin-left: 5px;"></i>
+            </div>
+            <div class="scroller">
+                <marquee scrollamount="12" direction="right" behavior="scroll">
+                    <img src="https://img.icons8.com/wired/64/000000/truck.png" />
+                    <img src="https://img.icons8.com/carbon-copy/64/000000/scooter.png" />
+                    <img src="https://img.icons8.com/pastel-glyph/64/000000/pickup.png" />
+                    <img src="https://img.icons8.com/carbon-copy/64/000000/cargo-ship.png" />
+                </marquee>
+            </div>
+            <div class="scroller">
+                <marquee scrollamount="12" direction="left" behavior="scroll">
+                    <img src="https://img.icons8.com/pastel-glyph/64/000000/box--v2.png" />
+                    <img src="https://img.icons8.com/pastel-glyph/64/000000/shipping-centre-loading-belt.png" />
+                    <img src="https://img.icons8.com/wired/64/000000/stacking.png" />
+                    <img src="https://img.icons8.com/wired/64/000000/fork-lift.png" />
+                    <img src="https://img.icons8.com/windows/50/000000/people-carry.png" />
+                </marquee>
+            </div>
+            <div class="scroller">
+                <marquee scrollamount="18" direction="right" behavior="scroll">
+                    <img src="https://img.icons8.com/ios-filled/50/00000/book.png" />
+                    <img src="https://img.icons8.com/color/red/48/000000/waze.png" />
+                    <img src="https://img.icons8.com/ios/50/000000/smartphone-tablet.png" />
+                    <img src="https://img.icons8.com/wired/64/000000/send-box.png" />
+                    <img src="https://img.icons8.com/pastel-glyph/64/000000/laptop--v1.png" />
+                    <img src="https://img.icons8.com/metro/50/000000/mac-os.png" />
+                    <img src="https://img.icons8.com/metro/50/000000/sofa.png" />
+                </marquee>
+            </div>
+
+        </div>
+
+        <div class="signin col-12 col-md-6" [formGroup]="dbForm">
+
+            <div class="row d-flex justify-content-center align-items-center mb-3" style="height:20px;">
+                <div class="alert alert-danger h6" role="alert" *ngIf="uiInvalidCredential">
+                    Invalid username or password
+                </div>
+            </div>
+            <div class="logo d-flex align-items-center justify-content-center">
+                <!-- <i class="fas fa-thumbtack"></i> -->
+                <img src="https://img.icons8.com/fluent-systems-filled/40/000000/pin.png" style="margin-right: 5px;" />
+                Sign in into your account
+            </div>
+
+            <div>
+
+                <input class="usernameinput ipbox" type="text" id="email" placeholder="Email Address or Username"
+                    formControlName="email" />
+                <label class="col-12 d-flex justify-content-center" for=""
+                    *ngIf="dbForm.get('email').invalid && dbForm.get('email').touched"
+                    style="color:red; font-size:medium;">
+                    Fill All details</label>
+            </div>
+
+            <div>
+
+                <input toggle class="passwordinput ipbox" type="password" id="pass" placeholder="Password"
+                    formControlName="pass" />
+                <label class="col-12 d-flex justify-content-center" for=""
+                    *ngIf="dbForm.get('pass').invalid && dbForm.get('pass').touched"
+                    style="color:red; font-size:medium;">
+                    Fill all details</label>
+
+                <div style=" margin-left: 20%; font-size: 3vmin; margin-top:2vh; margin-bottom: 2vh;">
+                    Remember Me <input type="checkbox" />
+                    <!-- (change)="fun($event)" /> -->
+                </div>
+
+            </div>
+
+
+
+            <div>
+                <button class="loginbtn" (click)="loginHere()">Login</button>
+            </div>
+
+            <div class="text" style="opacity: 0.8; margin-bottom: 2vh;">
+                <a routerLink='/forget' routerLinkActive="router-link-active" style="color: black;">Forget
+                    Password?</a>
+            </div>
+
+            <div class="text">
+                Don't have an account?<a routerLink="/reg" style="color: black;"> Register here</a>
+            </div>
+        </div>
+    </div>
+</div>
