@@ -24,7 +24,7 @@ export class RegisterComponent implements OnInit {
     conpass: ['', Validators.required],
     cont: ['', Validators.required],
     dob: ['', Validators.required],
-    sel: ['', Validators.required]
+    sel: "user",
   });
 
 
@@ -58,8 +58,5 @@ export class RegisterComponent implements OnInit {
       }
     }
   }
-  // resgisterHere() {
-
-  // }
 
 }
